@@ -18,7 +18,7 @@ jobs:
     
 
     steps:
-      - name: Checkout
+      - name: Checkout Code
         uses: actions/checkout@v4
 
       - name: Setup Terraform
@@ -27,7 +27,7 @@ jobs:
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v4
         with:
-          role-to-assume: arn:aws:iam::699158992697:role/oidc-github-role
+          role-to-assume: arn:aws:iam::699158992697:role/oidc-role
           aws-region: us-east-1
 
       - name: Terraform Init
