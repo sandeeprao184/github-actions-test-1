@@ -9,14 +9,10 @@ permissions:
   id-token: write
   contents: read
   
-
-
 jobs:
   terraform:
     runs-on: ubuntu-latest
-
     
-
     steps:
       - name: Checkout Code
         uses: actions/checkout@v4
